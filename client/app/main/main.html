@@ -1,0 +1,31 @@
+
+
+
+
+<div class="table-responsive">
+  <button type='button' class='btn btn-block btn-success' ng-click="vm.openCreateModal()" ng-show='vm.status._id'>Create a Movie</button>
+    <table class="table table-bordered box-shadow--6dp">
+      <thead>
+          <th>Title</th>
+          <th>Director</th>
+          <th>Release Year</th>
+          <th>Rating 1-5</th>
+          <th>Image</th>
+          <th  ng-show='vm.status._id' colspan=3>Other Info</th>
+          <!--  && m.owner === vm.status._idx -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat='m in vm.movies'>
+          <td>{{m.title}}</td>
+          <td>{{m.director}}</td>
+          <td>{{m.year}}</td>
+          <td>{{m.rating}}</td>
+          <td><img height='200' width='100%' ng-src='{{m.imageURL}}'/></td>
+              <td>Posted by {{m.owner.username}}</td>
+          <td ng-show='vm.status._id '><button class='btn btn-danger'  ng-click='vm.removeMovie(m)'>Delete</button></td>
+          <td ng-show='vm.status._id'><button class='btn btn-warning' ui-sref='update({id: m._id})'>Edit</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

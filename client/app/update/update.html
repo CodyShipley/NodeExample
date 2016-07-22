@@ -1,0 +1,26 @@
+<h1>Update Movie</h1>
+<form class='well container' ng-submit='vm.updateMovie()'>
+    <div>
+        <label>Title</label>
+        <input type="text" ng-model='vm.movie.title' class='form-control'>
+    </div>
+    <div>
+        <label>Director</label>
+        <input type="text" ng-model='vm.movie.director' class='form-control'>
+    </div>
+    <div>
+        <label>Year</label>
+        <input type="number" ng-model='vm.movie.year' class='form-control'>
+    </div>
+    <div>
+        <label>Rating</label>
+        <input type="text" ng-model='vm.movie.rating' class='form-control'>
+    </div>
+    <div>
+        <label>Image URL</label>
+        <input type="text" ng-model='vm.movie.imageURL' class='form-control'>
+    </div>
+    <div style='text-align:center'>
+      <button class='btn btn-info' name="button">Submit</button>
+    </div>
+</form>

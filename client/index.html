@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+
+<head>
+    <meta charset="utf-8">
+    <title>Example App</title>
+    <base href="/" />
+    <link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' />
+    <link rel='stylesheet' type='text/css' href='https://bootswatch.com/paper/bootstrap.min.css' />
+    <link rel='stylesheet' type='text/css' href='/client/assets/stylesheets/login.css' />
+    <link rel='stylesheet' type='text/css' href='/client/assets/stylesheets/navbar.css' />
+</head>
+
+<body>
+  <navbar></navbar>
+    <div ui-view=""></div>
+
+    <!-- External Scripts -->
+    <script src='/lib/angular/angular.min.js'></script>
+    <script src='/lib/angular-resource/angular-resource.min.js'></script>
+    <script src='/lib/angular-ui-router/release/angular-ui-router.min.js'></script>
+    <script src='/lib/angular-touch/angular-touch.min.js'></script>
+    <script src='/lib/angular-animate/angular-animate.min.js'></script>
+    <script src='/lib/angular-bootstrap/ui-bootstrap-tpls.min.js'></script>
+    <!-- Modules -->
+    <script src='/client/app/app.js'></script>
+    <script src='/client/app/main/main.module.js'></script>
+    <script src='/client/app/update/update.module.js'></script>
+    <script src='/client/app/auth/auth.module.js'></script>
+    <script src='/client/components/navbar/navbar.directive.js'></script>
+    <script src='/client/components/navbar/navbar.controller.js'></script>
+    <!-- Main Page -->
+    <script src='/client/app/main/main.controller.js'></script>
+    <script src='/client/app/update/update.controller.js'></script>
+    <script src='/client/components/create-movie-modal/create.movie.modal.controller.js'></script>
+    <script src='/client/app/movie.service.js'></script>
+
+    <script src='/client/components/AuthInterceptor/auth.interceptor.js'></script>
+    <script src='/client/app/auth/auth.service.js'></script>
+    <script src='/client/app/auth/login/login.controller.js'></script>
+    <script src='/client/app/auth/register/register.controller.js'></script>
+</body>
+
+</html>
